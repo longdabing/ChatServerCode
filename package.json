@@ -1,0 +1,25 @@
+{
+  "name": "weui",
+  "version": "1.0.0",
+  "description": "小程序点餐后台项目。\r 2020.5.30 项目新增WeUI库。added by longdb",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longdabing/ChatServerCode.git"
+  },
+  "keywords": [
+    "20081225bing"
+  ],
+  "author": "longdabing",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longdabing/ChatServerCode/issues"
+  },
+  "homepage": "https://github.com/longdabing/ChatServerCode#readme",
+  "dependencies": {
+    "weui-miniprogram": "^1.0.3"
+  }
+}
