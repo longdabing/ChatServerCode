@@ -2,5 +2,6 @@
   "usingComponents": {
     "we-tabbar":"/weui/tabbar/tabbar",
     "mp-searchbar":"/weui/searchbar/searchbar"
-  }
+  },
+  "navigationBarTitleText": "首页"
 }

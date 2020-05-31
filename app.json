@@ -1,8 +1,27 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/person/person",
     "pages/logs/logs"
   ],
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#008888",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab-homeno.png",
+        "selectedIconPath": "/images/tab-home.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "设置",
+        "iconPath": "/images/tab-settingno.png",
+        "selectedIconPath": "/images/tab-setting.png"
+      }
+    ]
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
