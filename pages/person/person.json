@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "we-nav":"/weui/navigation-bar/navigation-bar"
+  },
+  "navigationBarTitleText": "设置",
+  "navigationStyle":"custom"
 }

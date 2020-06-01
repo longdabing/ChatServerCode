@@ -5,7 +5,7 @@ const app = getApp()
 Page({
   data: {
     inputShowed: false,
-    inputVal: ""
+    inputVal: "",
 },
 onLoad() {
     this.setData({

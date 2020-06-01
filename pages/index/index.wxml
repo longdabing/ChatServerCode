@@ -1,6 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-<mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
-  
-  <we-tabbar>999</we-tabbar>
+<we-searchbar bindselectresult="selectResult" search="{{search}}"></we-searchbar>
+
 </view>

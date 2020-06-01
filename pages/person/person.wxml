@@ -1,2 +1,5 @@
-<!--pages/person/person.wxml-->
+<!--weui顶部导航栏组件覆盖原生导航栏-->
+<we-nav loading="{{loading}}" background="#ddd" back="{{back}}">
+<view slot="left">返回</view>
+</we-nav>
 <text>pages/person/person.wxml</text>
