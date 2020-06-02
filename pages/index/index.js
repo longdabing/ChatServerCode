@@ -7,6 +7,35 @@ Page({
     inputShowed: false,
     inputVal: "",
 },
+//上传图片到服务器
+  uploadimg:function(e){
+      console.log(e.currentTarget.dataset.mimg)
+    wx.chooseImage({
+      success (res) {
+        const tempFilePaths = res.tempFilePaths
+        console.log(res);
+        wx.uploadFile({
+          url: 'http://localhost:50596/api/DealFile', 
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'userid': 'longdbid',
+            'username':'longdb',
+            'imgpath':e.currentTarget.dataset.mimg
+          },
+          success (res){
+            const data = res.data
+            //do something
+            console.log(data);
+            wx.showModal({
+              title:'提示：',
+              content:'图片上传成功('+res.data+')'
+            })
+          }
+        })
+      }
+    })
+  },
 onLoad() {
     this.setData({
         search: this.search.bind(this)

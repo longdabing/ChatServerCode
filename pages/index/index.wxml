@@ -1,5 +1,9 @@
 <!--index.wxml-->
 <view class="container">
 <we-searchbar bindselectresult="selectResult" search="{{search}}"></we-searchbar>
-
+<view class="box">
+<view class="img" data-mimg="swiperimgs" bindtap="uploadimg">上传轮播图</view>
+<view class="img" bindtap="uploadimg">上传左侧菜单</view>
+<view class="img" bindtap="uploadimg">上传水果图</view>
+</view>
 </view>

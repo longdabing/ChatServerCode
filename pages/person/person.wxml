@@ -2,4 +2,5 @@
 <we-nav loading="{{loading}}" background="#ddd" back="{{back}}">
 <view slot="left">返回</view>
 </we-nav>
-<text>pages/person/person.wxml</text>
+<button type="primary" bindtap="getdata">获取数据测试</button>
+<button type="primary" bindtap="uploadfile">上传文件</button>

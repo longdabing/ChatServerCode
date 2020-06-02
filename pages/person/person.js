@@ -5,10 +5,39 @@ Page({
    * 页面的初始数据
    */
   data: {
-    back:false,
-    loading:true,
+    back: false,
+    loading: true,
   },
-
+  getdata: function () {
+    wx.request({
+      url: 'http://localhost:50596/weatherforecast',
+      success: (res) => {
+        console.log(res.data);
+      }
+    })
+  },
+  uploadfile:function(){
+    wx.chooseImage({
+      success (res) {
+        const tempFilePaths = res.tempFilePaths
+        console.log(res);
+        wx.uploadFile({
+          url: 'http://localhost:50596/api/DealFile', 
+          filePath: tempFilePaths[0],
+          name: 'file',
+          formData: {
+            'userid': 'longdbid',
+            'username':'longdb'
+          },
+          success (res){
+            const data = res.data
+            //do something
+            console.log(data);
+          }
+        })
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
