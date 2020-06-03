@@ -6,6 +6,7 @@ Page({
   data: {
     inputShowed: false,
     inputVal: "",
+    imgurl:""
 },
 //上传图片到服务器
   uploadimg:function(e){
@@ -33,6 +34,34 @@ Page({
             })
           }
         })
+      }
+    })
+  },
+  //从服务器下载轮播图。
+  downloadimg:function(){
+    wx.downloadFile({
+      url: 'http://localhost:50596/api/dealfile?fname=bever02.jpg', //api接口
+      success (res) {
+        if (res.statusCode === 200) {
+          console.log('下载成功');
+          wx.playVoice({
+            filePath: res.tempFilePath
+          });
+          
+            console.log(res.tempFilePath);
+              wx.saveFile({
+                tempFilePath: res.tempFilePath,//tempFilePaths[0],
+                success (res) {
+    
+                  const savedFilePath = res.savedFilePath;
+                  console.log(savedFilePath);
+                  wx.showModal({
+                    title: '提示',
+                    content:'保存成功'
+                  })
+                }
+              })    
+        }
       }
     })
   },
